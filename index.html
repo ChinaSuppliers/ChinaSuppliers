@@ -3,70 +3,108 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
 
-    <title>China Suppliers, Manufacturers & Sourcing | Steven</title>
+    <title>Steven · China Suppliers</title>
 
-    <meta name="description"
-          content="Find China suppliers, manufacturers, factories and sourcing support. Steven helps global buyers with China sourcing, wholesale, OEM, ODM, supplier verification and business assistance.">
+    <meta
+        name="description"
+        content="Steven · China Suppliers. Sourcing, IT, manufacturers, factories, wholesale, OEM and ODM. Helping global buyers source from China."
+    >
 
-    <meta name="keywords"
-          content="China suppliers, Chinese suppliers, China manufacturers, China factories, China sourcing, China wholesale, China OEM, China ODM, supplier verification, China business assistance">
+    <meta
+        name="keywords"
+        content="China Suppliers, Chinese Suppliers, China Sourcing, China Manufacturers, China Factories, Wholesale, OEM, ODM"
+    >
 
-    <meta name="author"
-          content="Steven">
+    <meta name="author" content="Steven">
 
-    <meta name="robots"
-          content="index, follow, max-image-preview:large">
+    <meta name="robots" content="index, follow">
 
-    <link rel="canonical"
-          href="https://chinasuppliers.github.io/ChinaSuppliers/">
+    <meta name="theme-color" content="#f5f7fa">
 
-    <meta property="og:type"
-          content="website">
-
-    <meta property="og:title"
-          content="China Suppliers, Manufacturers & Sourcing">
-
-    <meta property="og:description"
-          content="Helping global buyers source products, suppliers and manufacturing services from China.">
-
-    <meta property="og:url"
-          content="https://chinasuppliers.github.io/ChinaSuppliers/">
-
-    <meta property="og:site_name"
-          content="ChinaSuppliers">
-
-    <meta name="twitter:card"
-          content="summary">
-
-    <meta name="twitter:title"
-          content="China Suppliers, Manufacturers & Sourcing">
-
-    <meta name="twitter:description"
-          content="China sourcing, suppliers, manufacturers, factories, wholesale, OEM and ODM support for global buyers.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Steven · China Suppliers">
+    <meta
+        property="og:description"
+        content="Sourcing · IT · Manufacturers · Factories · Wholesale · OEM · ODM"
+    >
+    <meta property="og:url" content="https://chinasuppliers.github.io/ChinaSuppliers/">
 
     <style>
+        :root {
+            --bg-start: #f8fafc;
+            --bg-end: #eef2f7;
+
+            --card-bg: rgba(255, 255, 255, 0.72);
+            --card-border: rgba(255, 255, 255, 0.9);
+
+            --text-main: #111827;
+            --text-secondary: #667085;
+            --text-muted: #98a2b3;
+
+            --button-bg: rgba(255, 255, 255, 0.8);
+            --button-border: rgba(17, 24, 39, 0.08);
+            --button-hover: rgba(255, 255, 255, 1);
+
+            --shadow:
+                0 25px 70px rgba(15, 23, 42, 0.10);
+        }
+
         * {
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
         }
 
         body {
-            margin: 0;
+            min-height: 100vh;
+            min-height: 100dvh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding:
+                max(24px, env(safe-area-inset-top))
+                max(20px, env(safe-area-inset-right))
+                max(24px, env(safe-area-inset-bottom))
+                max(20px, env(safe-area-inset-left));
+
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
                 "Segoe UI",
+                Roboto,
+                Helvetica,
                 Arial,
                 sans-serif;
-            color: #222;
-            background: #fff;
-            line-height: 1.7;
+
+            color: var(--text-main);
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(255, 255, 255, 0.95),
+                    transparent 45%
+                ),
+                linear-gradient(
+                    145deg,
+                    var(--bg-start),
+                    var(--bg-end)
+                );
+
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
         a {
@@ -74,300 +112,347 @@
             text-decoration: none;
         }
 
-        .container {
-            width: min(920px, calc(100% - 40px));
-            margin: auto;
+        .card {
+            position: relative;
+
+            width: 100%;
+            max-width: 520px;
+
+            padding: 42px 32px 30px;
+
+            text-align: center;
+
+            background: var(--card-bg);
+
+            border: 1px solid var(--card-border);
+
+            border-radius: 28px;
+
+            box-shadow: var(--shadow);
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            animation: card-in 0.7s ease both;
         }
 
-        header {
-            padding: 70px 0 50px;
-            border-bottom: 1px solid #eee;
+        .avatar {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 76px;
+            height: 76px;
+
+            margin-bottom: 20px;
+
+            font-size: 43px;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            border: 1px solid rgba(255, 255, 255, 1);
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 12px 30px rgba(15, 23, 42, 0.08);
         }
 
         h1 {
-            margin: 0 0 15px;
-            font-size: clamp(36px, 7vw, 64px);
-            line-height: 1.1;
-        }
+            margin: 0;
 
-        h2 {
-            margin-top: 55px;
-            font-size: 28px;
-        }
+            font-size: clamp(30px, 7vw, 42px);
 
-        .subtitle {
-            font-size: 21px;
-            color: #555;
-            margin: 0 0 25px;
-        }
+            font-weight: 700;
 
-        .keywords {
-            font-weight: 600;
-            color: #444;
-            margin: 25px 0;
-        }
+            letter-spacing: -1.4px;
 
-        .intro {
-            max-width: 760px;
-            font-size: 18px;
-        }
-
-        .links {
-            display: grid;
-            gap: 12px;
-            margin-top: 25px;
-        }
-
-        .link {
-            display: block;
-            padding: 17px 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background: #fafafa;
-            transition: 0.2s;
-        }
-
-        .link:hover {
-            background: #f2f2f2;
-            transform: translateY(-1px);
-        }
-
-        .link strong {
-            display: block;
-            margin-bottom: 3px;
-        }
-
-        section {
-            padding-bottom: 20px;
+            line-height: 1.15;
         }
 
         .services {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px;
+            margin-top: 17px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            line-height: 1.8;
+
+            letter-spacing: 0.2px;
+
+            color: #475467;
+        }
+
+        .intro {
+            max-width: 410px;
+
+            margin: 20px auto 26px;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            color: var(--text-secondary);
+        }
+
+        .links {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        .link {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 50px;
+
+            padding: 12px 18px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #344054;
+
+            background: var(--button-bg);
+
+            border: 1px solid var(--button-border);
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 4px 12px rgba(15, 23, 42, 0.025);
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .link:hover {
+            background: var(--button-hover);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .link:active {
+            transform: translateY(0);
+        }
+
+        .link-icon {
+            margin-right: 8px;
+
+            font-size: 17px;
+        }
+
+        .official {
             margin-top: 20px;
+
+            font-size: 14px;
+
+            color: var(--text-secondary);
         }
 
-        .service {
-            padding: 18px;
-            border: 1px solid #eee;
-            border-radius: 10px;
+        .official a {
+            font-weight: 700;
+
+            color: var(--text-main);
+
+            border-bottom: 1px solid rgba(17, 24, 39, 0.25);
+
+            transition: border-color 0.2s ease;
         }
 
-        footer {
-            margin-top: 60px;
-            padding: 35px 0;
-            border-top: 1px solid #eee;
-            color: #666;
+        .official a:hover {
+            border-color: var(--text-main);
         }
 
-        @media (max-width: 600px) {
-            header {
-                padding-top: 45px;
+        .copyright {
+            margin-top: 27px;
+
+            font-size: 12px;
+
+            letter-spacing: 0.2px;
+
+            color: var(--text-muted);
+        }
+
+        @keyframes card-in {
+            from {
+                opacity: 0;
+                transform: translateY(14px) scale(0.985);
             }
 
-            .container {
-                width: min(100% - 28px, 920px);
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 34px 20px 25px;
+
+                border-radius: 24px;
+            }
+
+            .avatar {
+                width: 68px;
+                height: 68px;
+
+                font-size: 38px;
+            }
+
+            .services {
+                font-size: 13px;
+            }
+
+            .intro {
+                font-size: 15px;
+
+                margin-top: 17px;
+            }
+
+            .link {
+                min-height: 48px;
+
+                font-size: 13.5px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .card {
+                animation: none;
+            }
+
+            .link {
+                transition: none;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-start: #0f172a;
+                --bg-end: #020617;
+
+                --card-bg: rgba(15, 23, 42, 0.68);
+                --card-border: rgba(255, 255, 255, 0.08);
+
+                --text-main: #f8fafc;
+                --text-secondary: #aab4c3;
+                --text-muted: #667085;
+
+                --button-bg: rgba(255, 255, 255, 0.045);
+                --button-border: rgba(255, 255, 255, 0.08);
+                --button-hover: rgba(255, 255, 255, 0.09);
+
+                --shadow:
+                    0 25px 70px rgba(0, 0, 0, 0.35);
+            }
+
+            .avatar {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .services {
+                color: #c0c9d5;
+            }
+
+            .link {
+                color: #d0d5dd;
+            }
+
+            .official a {
+                color: #f8fafc;
+                border-color: rgba(255, 255, 255, 0.25);
             }
         }
     </style>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Steven",
-        "jobTitle": "China Sourcing & Business Support",
-        "url": "https://chinasuppliers.github.io/ChinaSuppliers/",
-        "knowsAbout": [
-            "China Suppliers",
-            "China Manufacturers",
-            "China Factories",
-            "China Sourcing",
-            "Wholesale",
-            "OEM",
-            "ODM",
-            "Supplier Verification",
-            "China Business Assistance"
-        ],
-        "sameAs": [
-            "https://visaservice.icu/"
-        ]
-    }
-    </script>
 </head>
 
 <body>
 
-<header>
-    <div class="container">
+    <main class="card">
 
-        <h1>🇨🇳 China Suppliers</h1>
-
-        <p class="subtitle">
-            China Sourcing · Suppliers · Manufacturers · Factories
-        </p>
-
-        <p class="keywords">
-            Wholesale · OEM · ODM · Supplier Verification ·
-            Business Assistance
-        </p>
-
-        <p class="intro">
-            Helping global buyers source products, suppliers and
-            manufacturing services from China. I provide practical
-            China sourcing, supplier communication, factory support
-            and business assistance for international buyers,
-            importers, distributors and wholesalers.
-        </p>
-
-    </div>
-</header>
-
-<main class="container">
-
-    <section>
-        <h2>China Business Services</h2>
-
-        <div class="links">
-
-            <a class="link"
-               href="https://chinalocalsupport.github.io/china-business-assistance/">
-                <strong>🌐 China Business Assistance</strong>
-                China sourcing, supplier connection, factory support
-                and local business assistance.
-            </a>
-
-            <a class="link"
-               href="https://chinalocalsupport.github.io/china-business-trade-agent/">
-                <strong>🤝 China Business Trade Agent</strong>
-                Product sourcing, procurement, supplier communication,
-                factory visits and trade support.
-            </a>
-
-            <a class="link"
-               href="https://chinalocalsupport.github.io/china-business-problems/">
-                <strong>🔎 China Supplier & Business Support</strong>
-                Supplier verification, factory verification,
-                product inspection and local problem solving.
-            </a>
-
-            <a class="link"
-               href="https://visaservice.icu/">
-                <strong>🌍 Official Website</strong>
-                China business assistance and related services.
-            </a>
-
+        <div class="avatar" aria-hidden="true">
+            👨🏻
         </div>
-    </section>
 
-    <section>
-        <h2>China Sourcing</h2>
-
-        <p>
-            Looking for a China supplier, manufacturer or factory?
-            I help international buyers identify potential suppliers,
-            communicate with Chinese businesses and coordinate
-            sourcing activities in China.
-        </p>
+        <h1>
+            Steven · China Suppliers
+        </h1>
 
         <div class="services">
-
-            <div class="service">
-                <strong>🔎 Supplier Sourcing</strong>
-                <br>
-                Find potential suppliers and manufacturers in China.
-            </div>
-
-            <div class="service">
-                <strong>🏭 Factory Sourcing</strong>
-                <br>
-                Connect with manufacturers and factories.
-            </div>
-
-            <div class="service">
-                <strong>📦 Product Sourcing</strong>
-                <br>
-                Support for product research and procurement.
-            </div>
-
-            <div class="service">
-                <strong>✅ Supplier Verification</strong>
-                <br>
-                Supplier and factory verification support.
-            </div>
-
-            <div class="service">
-                <strong>🔬 Product Inspection</strong>
-                <br>
-                Product and pre-shipment inspection assistance.
-            </div>
-
-            <div class="service">
-                <strong>🧩 OEM & ODM</strong>
-                <br>
-                Support for customized manufacturing projects.
-            </div>
-
+            Sourcing · IT · Manufacturers · Factories · Wholesale · OEM · ODM
         </div>
-    </section>
 
-    <section>
-        <h2>For Global Buyers</h2>
-
-        <p>
-            This service is designed for international buyers,
-            importers, distributors, wholesalers, retailers,
-            purchasing teams and businesses looking to work
-            with suppliers and manufacturers in China.
+        <p class="intro">
+            Helping global buyers source from China.
         </p>
 
-        <p>
-            Whether you need a China supplier, factory,
-            manufacturer, wholesale source, OEM or ODM partner,
-            local communication and practical support can help
-            make the sourcing process easier.
-        </p>
-    </section>
+        <nav class="links" aria-label="Business services">
 
-    <section>
-        <h2>China Suppliers & Manufacturers</h2>
+            <a
+                class="link"
+                href="https://chinalocalsupport.github.io/china-business-assistance/"
+                target="_blank"
+                rel="noopener"
+            >
+                <span class="link-icon">🌐</span>
+                China Business Assistance
+            </a>
 
-        <p>
-            China has a large and diverse manufacturing and
-            supplier ecosystem covering consumer products,
-            electronics, machinery, industrial equipment,
-            automotive products, textiles, packaging, furniture,
-            building materials and many other product categories.
-        </p>
+            <a
+                class="link"
+                href="https://chinalocalsupport.github.io/china-business-trade-agent/"
+                target="_blank"
+                rel="noopener"
+            >
+                <span class="link-icon">🤝</span>
+                China Business Trade Agent
+            </a>
 
-        <p>
-            If you are searching for China suppliers or
-            manufacturers, the right supplier depends on your
-            product requirements, quantity, quality standards,
-            customization needs, budget and delivery requirements.
-        </p>
-    </section>
+            <a
+                class="link"
+                href="https://chinalocalsupport.github.io/china-business-problems/"
+                target="_blank"
+                rel="noopener"
+            >
+                <span class="link-icon">🔎</span>
+                China Supplier &amp; Business Support
+            </a>
 
-</main>
+        </nav>
 
-<footer>
-    <div class="container">
+        <div class="official">
+            <span>🇨🇳</span>
+            <strong>China Suppliers</strong>
+            ·
+            <a
+                href="https://visaservice.icu/"
+                target="_blank"
+                rel="noopener"
+            >
+                Official Website
+            </a>
+        </div>
 
-        <strong>Steven 🇨🇳</strong>
+        <div class="copyright">
+            © 2026 Steven · China Suppliers
+        </div>
 
-        <p>
-            China Sourcing · Suppliers · Manufacturers ·
-            Factories · Wholesale · OEM · ODM
-        </p>
-
-        <p>
-            © 2026 ChinaSuppliers
-        </p>
-
-    </div>
-</footer>
+    </main>
 
 </body>
 </html>
