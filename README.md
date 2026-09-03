@@ -4,8 +4,8 @@
 
 Helping global buyers source from China.
 
-🌐 [China Business Assistance](https://chinalocalsupport.github.io/china-business-assistance/)  
-🤝 [China Business Trade Agent](https://chinalocalsupport.github.io/china-business-trade-agent/)  
-🔎 [China Supplier & Business Support](https://chinalocalsupport.github.io/china-business-problems/)  
+🌐 [China Business Assistance](https://chinamanufacturers.github.io/chinabusinessassistance/)  
+🤝 [China Business Trade Agent](https://chinamanufacturers.github.io/chinabusinesstradeagent/)  
+🔎 [China Supplier & Business Support](https://chinamanufacturers.github.io/chinabusinessproblems/)  
 
 **China Suppliers · [Official Website](https://visaservice.icu/)**
